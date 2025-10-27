@@ -3,9 +3,9 @@
   <label>Introduzca número:</label>
     <!-- va a dar error por el v-model -->
    <input type="number" v-model="numero"/>
-   <button @click="collatz()">Insertar</button>
+   <button @click="generarCollatz()">Insertar</button>
    <ul>
-    <li v-for="num in nums" :key="num" v-html="$filters.evaluarNums(num)"></li>
+    <li v-for="num in numerosCollatz" :key="num" v-html="$filters.evaluarNums(num)"></li>
    </ul>
 </template>
 
@@ -15,13 +15,13 @@ name:"CollatzComponent",
 data(){
     return{
         numero:0,
-        nums:[]
+        numerosCollatz:[]
     }
 },
 
 methods:{
-    collatz(){
-        this.nums=[]
+    generarCollatz(){
+        this.numerosCollatz=[]
         let num=this.numero
          while(num!=1){
             if(num%2==0){//si es par 
@@ -29,7 +29,7 @@ methods:{
             }else{
                 num=num*3 +1;
             }
-            this.nums.push(num);
+            this.numerosCollatz.push(num);
         }
     }
 }
