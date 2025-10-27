@@ -13,7 +13,15 @@ app.config.globalProperties.$filters={
             data= "<h4 style='color:red'>Impar:"+ num+"</h4>";
         }
         return data;
-    }
+    },
+    getOperacion(num,multi){
+            
+            return num +"*"+ multi ;
+        },
+    getResultado(num,multi){
+
+        return num*multi;    
+        }
 }
 
 app.use(router)
