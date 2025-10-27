@@ -1,0 +1,14 @@
+img{
+    width: auto;
+    height: 250px;
+}
+h1{
+    color: teal;
+    background-color: azure;
+}
+h2{
+    color: yellowgreen;
+}
+ul#menu li{
+    display: inline;
+}
